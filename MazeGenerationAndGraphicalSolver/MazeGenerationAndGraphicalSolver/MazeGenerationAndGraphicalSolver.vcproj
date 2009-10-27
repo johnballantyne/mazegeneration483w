@@ -171,6 +171,14 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\King.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Location.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MazeGenerationAndGraphicalSolver.cpp"
 				>
 			</File>
@@ -184,6 +192,22 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\Coordinate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\king.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Location.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Maze.h"
+				>
+			</File>
 			<File
 				RelativePath=".\stdafx.h"
 				>
