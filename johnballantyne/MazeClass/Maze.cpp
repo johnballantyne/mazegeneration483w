@@ -99,9 +99,9 @@ void Maze::printMaze()
 		for (int j=0; j<width; j++)
 		{
 			if (maze[i][j])
-				cout << "1," << "";
+				cout << "1" << "";
 			else
-				cout << "0,";
+				cout << " ";
 		}
 		cout << endl;
 	}
