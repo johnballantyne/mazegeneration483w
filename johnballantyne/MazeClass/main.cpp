@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	Maze maze(9, 9);
+	Maze maze(19, 19);
 	//maze.printMaze();
 	//maze.setCoordinate(2, 4, true);
 	cout << endl;
