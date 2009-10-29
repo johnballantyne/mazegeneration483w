@@ -179,6 +179,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Maze.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MazeGenerationAndGraphicalSolver.cpp"
 				>
 			</File>
