@@ -34,7 +34,7 @@ void Location::MoveZ(int z)
 
 bool Location::IsWall(Coordinates checkCoordinate, Maze myMaze)
 {
-	return myMaze.CheckCoordinates(checkCoordinate);
+	return myMaze.checkCoordinate(checkCoordinate.x, checkCoordinate.z);
 }
 //overloaded operator for assignment
 Location& Location::operator=(Location &myLocation) 
