@@ -201,7 +201,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\king.h"
+				RelativePath=".\King.h"
+				>
+			</File>
+			<File
+				RelativePath=".\KingRightHandRule.h"
 				>
 			</File>
 			<File

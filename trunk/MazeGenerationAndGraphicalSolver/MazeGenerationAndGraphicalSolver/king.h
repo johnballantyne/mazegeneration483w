@@ -1,15 +1,21 @@
 #pragma once
 #include "Location.h"
 
+enum Direction {North, East, South, West};
+
 class King
 {
 public:
 	//default constructer
-	King(){};
+	King()
+	{
+		SetDirection(North);
+	};
 
 	//init constructor
 	King(Coordinates startCoordinate)
 	{
+		SetDirection(North);
 		myLocation.SetCoordinates(startCoordinate);
 	};
 	//getter for location
@@ -33,8 +39,19 @@ public:
 
 	//Check if there is a wall directly North of the kings location
 	bool LookNorth();
-
+	
+	//get the direction
+	Direction GetDirection()
+	{
+		return myDirection;
+	}
+	void SetDirection(Direction newDirection)
+	{
+		myDirection = newDirection;
+	}
+	void  SolveMaze();
 private:
 	Location myLocation;
 	Maze myMaze;
+	Direction myDirection;
 };
