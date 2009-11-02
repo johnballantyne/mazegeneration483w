@@ -2,10 +2,13 @@
 //
 
 #include "stdafx.h"
+#include "KingrightHandRule.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	KingRightHandRule myKing;
+	cout<<myKing.GetDirection();
 	return 0;
 }
 
