@@ -141,133 +141,74 @@ public:
 			glEnd();
 		}
 
-	}
 
-
-	
-	void DrawObject(float w, float l, float h = 0.0)
-	{
-		float x = Coord.GetX();
-		float y = Coord.GetY();
-		float z = Coord.GetZ();
-
-		//Draw the surface of the box
-
-		glBegin(GL_QUADS);
-			glColor4f(r, g, b, alpha);
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-
-						//if the depth of the object is 0, we don't need to draw the other sides
-			if ( h != 0 )
-			{
-				//Left side
-				//glColor3f(1, 1, 1);
-				glColor4f(r, g, b, alpha);
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-
-				//Back side
-			//	glColor4f(r, g, b, alpha);
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-
-				//Right side
-			//	glColor4f(r, g, b, alpha);
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-
-				//Top side
-			//	glColor4f(r, g, b, alpha);
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-
-				//Front side
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));		//(y-l/2) = (y - L/2) not (y - 1/2)
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-
-			}
-
+		//Draw the Border line of the object
+			glBegin(GL_LINE_LOOP);
+			//glColor4f(r, g, b, alpha);
+			glColor4f(1, 1, 1, alpha);
+			glVertex3f( x - (W/2), y, z + (L/2));
+			glVertex3f( x - (W/2), y, z - (L/2));
+			glVertex3f( x + (W/2), y, z - (L/2));
+			glVertex3f( x + (W/2), y, z + (L/2));
 		glEnd();
 
+		if ( H > 0 )
+		{
+			
+			glBegin(GL_LINE_LOOP);
+				//Draw left side
+				 //glColor4f(r, g, b, alpha);
+				glColor4f(1, 1, 1, alpha);
+				 glVertex3f( x - (W/2), y, z + (L/2));
+				 glVertex3f( x - (W/2), y, z - (L/2));
+				 glVertex3f( x - (W/2), y+H, z - (L/2));
+				 glVertex3f( x - (W/2), y+H, z + (L/2));
+			 glEnd();
 
 
-		//Draw the border of the box
-		//draw front side
-		//glColor3f(1, 1, 1);
-		glBegin(GL_LINE_LOOP);
-		/*
-			glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-			glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-			glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-			glVertex3f( x-(w/2), y+(l/2), z+(h/2));
+				 //Draw back side
+			 glBegin(GL_LINE_LOOP);
+			 glColor4f(1, 1, 1, alpha);
+				 //glColor4f(r, g, b, alpha);
+				 glVertex3f( x - (W/2), y, z - (L/2));
+				 glVertex3f( x + (W/2), y, z - (L/2));
+				 glVertex3f( x + (W/2), y+H, z - (L/2));
+				 glVertex3f( x - (W/2), y+H, z - (L/2));
+
+				 glEnd();
+
+				 glBegin(GL_LINE_LOOP);
+				 //Draw right side
+				 //glColor4f( r, g, b, alpha);
+				 glColor4f(1, 1, 1, alpha);
+				 glVertex3f( x + (W/2), y, z + (L/2));
+				 glVertex3f( x + (W/2), y, z - (L/2));
+				 glVertex3f( x + (W/2), y+H, z - (L/2));
+				 glVertex3f( x + (W/2), y+H, z + (L/2));
+				 glEnd();
+
+				 //Draw front side
+				 glBegin(GL_LINE_LOOP);
+				 //glColor4f(r, g, b, alpha);
+				 glColor4f(1, 1, 1, alpha);
+				 glVertex3f( x - (W/2), y, z + (L/2));
+				 glVertex3f( x + (W/2), y, z + (L/2));
+				 glVertex3f( x + (W/2), y+H, z + (L/2));
+				 glVertex3f( x - (W/2), y+H, z + (L/2));
+				 glEnd();
+
+				 //Draw top side
+				 glBegin(GL_LINE_LOOP);
+				 //glColor4f(r, g, b, alpha);
+				 glColor4f(1, 1, 1, alpha);
+				 glVertex3f( x - (W/2), y+H, z + (L/2));
+				 glVertex3f( x - (W/2), y+H, z - (L/2));
+				 glVertex3f( x + (W/2), y+H, z - (L/2));
+				 glVertex3f( x + (W/2), y+H, z + (L/2));
+
 			glEnd();
-*/
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-		glEnd();
-						//if the depth of the object is 0, we don't need to draw the other sides
-			if ( h != 0 )
-			{
-				glBegin(GL_LINE_LOOP);
-				//Left side
-				//glColor3f(1, 1, 1);
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-				glEnd();
+		}
 
-				glBegin(GL_LINE_LOOP);
-
-				//Back side
-				glVertex3f( x-(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-				glEnd();
-
-				glBegin(GL_LINE_LOOP);
-
-				//Right side
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-				glEnd();
-
-				glBegin(GL_LINE_LOOP);
-
-				//Top side
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z-(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-				glEnd();
-
-				glBegin(GL_LINE_LOOP);
-
-				//Front side			
-				glVertex3f( x-(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x+(w/2), y-(l/2), z+(h/2));
-				glVertex3f( x+(w/2), y+(l/2), z+(h/2));
-				glVertex3f( x-(w/2), y+(l/2), z+(h/2));
-			glEnd();
-			}
 	}
 
 };

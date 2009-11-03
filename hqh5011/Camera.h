@@ -25,6 +25,10 @@ public:
 	void RotateY(float angle);
 	void RotateX(float angle);
 	void RotateZ(float angle);
+	void MoveStraight(float distance);
+
+	void TopViewCamera();
+	void ThirdPersonCamera();
 
 	void SetCamera()
 	{
