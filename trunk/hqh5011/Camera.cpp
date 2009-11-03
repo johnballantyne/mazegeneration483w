@@ -8,7 +8,18 @@ void Camera::RotateY(float angle)
 	float zd = Direction.z();
 
 	//Rotate about the y-axis
+	//This will rotate the camera around the origin axis
 	
+	//The rotation here is using Rotation Matrix around the Y-axis
+
+
+	// (New camera Position) = RotationMatrix * (Old camera Position)
+	/*
+		| cos(ang)    0     -sin(ang)   0  |   | CamX |
+		|    0        1        0        0  |   | CamY |
+		| sin(ang)    0      cos(ang)   0  | * | CamZ |
+		|    0        0        0        1  |   |  1   |
+	*/
 	Vect3d newDir(xd*cos(angle) - zd*sin(angle),
 					yd,
 					xd*sin(angle) + zd*cos(angle));
@@ -46,4 +57,30 @@ void Camera::RotateX(float angle)
 	Vect3d newDirection;
 	newDirection = Up.Cross(X_Axis);
 	Direction = newDirection;
+}
+
+void Camera::MoveStraight(float distance)
+{
+	float px = Position.x();
+	float py = Position.y();
+	float pz = Position.z();
+
+	Position.Set(px+Direction.x()*distance,
+				 py+Direction.y()*distance,
+				 pz+Direction.z()*distance);
+
+}
+
+void Camera::TopViewCamera()
+{
+	Position.Set(0, 50, 0);		//Set position of the top view camera
+	Direction.Set(0, -1, 0);	//Direction of looking is down
+	Up.Set(0, 0, -1);		//Up direction is toward the -z axis
+}
+
+void Camera::ThirdPersonCamera()
+{
+	Position.Set(0, 0, 0);
+	Direction.Set(0, 0, -1);
+	Up.Set(0, 1, 0);
 }
