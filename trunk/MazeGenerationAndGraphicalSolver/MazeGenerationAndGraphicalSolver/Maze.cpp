@@ -60,6 +60,11 @@ Maze::Maze(int w, int l)
 
 }
 
+vector<vector<bool>> Maze::GetMaze()
+{
+	return maze;
+}
+
 void Maze::setWidth(int w)
 {
 	//width = w*4+1;
@@ -99,9 +104,9 @@ void Maze::printMaze()
 		for (int j=0; j<width; j++)
 		{
 			if (maze[i][j])
-				cout << "1," << "";
+				cout << "1" << "";
 			else
-				cout << "0,";
+				cout << " ";
 		}
 		cout << endl;
 	}

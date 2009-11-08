@@ -41,7 +41,8 @@ Location& Location::operator=(Location &myLocation)
 {
 	this->SetCoordinates(myLocation.GetCoordinates());
     return *this;
-  }
+}
+
 /*cout coordinates
 ostream& operator<<(ostream& output, Location p) 
 {

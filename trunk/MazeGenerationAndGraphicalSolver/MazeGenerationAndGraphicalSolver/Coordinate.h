@@ -7,3 +7,6 @@ struct Coordinates
 	int y;
 	int z;
 };
+
+bool operator==(Coordinates& other, Coordinates &myCoordinate);
+bool operator!=(Coordinates& other, Coordinates &myCoordinate);

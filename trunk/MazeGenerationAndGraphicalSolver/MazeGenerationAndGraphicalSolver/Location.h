@@ -35,7 +35,6 @@ public:
 	bool IsWall(Coordinates checkCoordinate, Maze myMaze);
 	//overloaded = operator for locations
 	Location & operator=(Location &myLocation);
-
 private:
 	Coordinates myCoordinates;
 };
