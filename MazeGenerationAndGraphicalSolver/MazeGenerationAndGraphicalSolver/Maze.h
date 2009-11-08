@@ -8,6 +8,7 @@ class Maze
 public:
 	Maze();
 	Maze(int w, int l);
+	vector<vector<bool>> GetMaze();
 	void setWidth(int w);
 	void setLength(int l);
 	int getWidth();

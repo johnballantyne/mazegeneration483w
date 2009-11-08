@@ -2,13 +2,21 @@
 //
 
 #include "stdafx.h"
-#include "KingrightHandRule.h"
-
+#include "KingRHR.h"
+#include "Coordinate.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	KingRightHandRule myKing;
-	cout<<myKing.GetDirection();
+	KingRHR myKing;
+
+	Maze maze(19, 19);
+	cout << endl;
+
+	maze.GenMaze_Recursive();
+		maze.printMaze();
+	system("pause");
+
+
 	return 0;
 }
 
