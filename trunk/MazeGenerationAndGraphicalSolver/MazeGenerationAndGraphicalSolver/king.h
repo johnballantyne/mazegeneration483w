@@ -38,6 +38,7 @@ public:
 		myDirection = newDirection;
 	}
 	/********************************Looking Functions***********************/
+
 	//Check if there is a wall directly West of the kings location
 	bool LookWest();
 
@@ -46,7 +47,7 @@ public:
 
 	//Check if there is a wall directly South of the kings location
 	bool LookSouth();
-
+	
 	//Check if there is a wall directly North of the kings location
 	bool LookNorth();
 
@@ -56,6 +57,7 @@ public:
 
 	//set up the maze
 	void SetUpMaze();
+	
 private:
 	//Location Variable stores Kings Coordinates
 	//See location.h for methods
