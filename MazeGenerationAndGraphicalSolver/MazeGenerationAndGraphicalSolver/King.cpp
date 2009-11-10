@@ -31,3 +31,16 @@ bool King::LookNorth()
 
 	return GetLocation().IsWall(temp.GetCoordinates(), GetMaze());
 };
+
+void King::Move(Direction myDirection)
+{
+	Location temp = GetLocation();
+	if(myDirection = North)
+		temp.MoveZ(-1);
+	else if (myDirection = East)
+		temp.MoveY(1);
+	else if (myDirection = South)
+		temp.MoveZ(1);
+	else if (myDirection = West)
+		temp.MoveY(-1);
+};
