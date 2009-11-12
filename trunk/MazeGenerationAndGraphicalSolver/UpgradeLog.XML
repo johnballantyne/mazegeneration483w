@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MazeGenerationAndGraphicalSolver">
+</Property><Property Name="Solution File" Value="C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.suo">
+</Property><Property Name="Date" Value="Thursday, November 05, 2009">
+</Property><Property Name="Time" Value="12:40 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MazeGenerationAndGraphicalSolver.sln" Description="File successfully backed up as C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="MazeGenerationAndGraphicalSolver.suo" Description="File successfully backed up as C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.suo.old">
+</Event><Event ErrorLevel="0" Project="MazeGenerationAndGraphicalSolver" Source="MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcproj" Description="Converting project file 'C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcproj'.">
+</Event><Event ErrorLevel="1" Project="MazeGenerationAndGraphicalSolver" Source="MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="MazeGenerationAndGraphicalSolver" Source="MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcproj" Description="Done converting to new project file 'C:\Users\Jengo\Desktop\Project\mazegeneration483w\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="MazeGenerationAndGraphicalSolver" Source="MazeGenerationAndGraphicalSolver\MazeGenerationAndGraphicalSolver.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MazeGenerationAndGraphicalSolver.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MazeGenerationAndGraphicalSolver.sln" Description="Converted">
+</Event></UpgradeLog>
