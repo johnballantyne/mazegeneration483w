@@ -16,12 +16,21 @@ public:
 	void setCoordinate(int x, int y, bool set);
 	void printMaze();
 	void GenMaze_Recursive();
+	void GenMaze_DFS();
+	void initMaze(int w, int l);
 private:
+	void Random_StartEnd();
 	void GenMaze_RecursiveFunction(int x1, int x2, int y1, int y2);
+	void FillMazeWalls();
 	int width;
 	int length;
 	int real_width;
 	int real_length;
 	vector<vector<bool>> maze;
+	struct cell {
+		int X;
+		int Y;
+		int status;
+	};
 };
 #endif
