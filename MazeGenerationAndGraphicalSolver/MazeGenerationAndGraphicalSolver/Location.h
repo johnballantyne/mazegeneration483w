@@ -14,17 +14,20 @@ class Location
 {
 public:
 	//default constructor
-	Location(){};
+	Location()
+	{
+		SetCoordinates(1,1,1);
+	}
 	//init constructor
 	//sets location passed to it from maze
 	Location(Coordinates newCoordinate)
 	{
-		SetCoordinates(newCoordinate);
-	};
+		SetCoordinates(newCoordinate.x, newCoordinate.y, newCoordinate.z);
+	}
 	//returns struct of Coordinates type
 	Coordinates GetCoordinates();
 	//sets the locaiton of whatever has a location
-	void SetCoordinates(Coordinates newCoordinate);
+	void SetCoordinates(int x, int y, int z);
 	//change the X location
 	void MoveX(int x);
 	//change the y location

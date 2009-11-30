@@ -3,8 +3,12 @@
 
 class KingLHR : public King
 {
-	void Solve(Coordinates Start, Coordinates End, Direction startDirection)
+public:
+	void SolveMaze(Coordinates Start, Coordinates End, Direction startDirection)
 	{
+		GetLocation().SetCoordinates(Start.x, Start.y, Start.z);
+		SetDirection(startDirection);
+
 		do{
 			while(GetDirection() == North){
 				if(!LookNorth())

@@ -43,4 +43,5 @@ void King::Move(Direction myDirection)
 		temp.MoveZ(1);
 	else if (myDirection = West)
 		temp.MoveY(-1);
+	GetLocation() = temp;
 };
