@@ -10,6 +10,8 @@ public:
 	//default constructer
 	King()
 	{
+		SetDirection(North);
+		myMaze.GenMaze_Recursive();
 	};
 
 	/********************************Getters*********************************/
@@ -57,6 +59,8 @@ public:
 
 	//set up the maze
 	void SetUpMaze();
+
+	void Move(Direction moveDirection);
 	
 private:
 	//Location Variable stores Kings Coordinates

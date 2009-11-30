@@ -7,13 +7,12 @@ Coordinates Location::GetCoordinates()
 }
 
 //sets the locaiton of whatever has a location
-void Location::SetCoordinates(Coordinates newCoordinate)
+void Location::SetCoordinates(int x, int y, int z)
 {
-	myCoordinates.x = newCoordinate.x;
-	myCoordinates.y = newCoordinate.y;
-	myCoordinates.z = newCoordinate.z;
+	myCoordinates.x = x;
+	myCoordinates.y = y;
+	myCoordinates.z = z;
 }
-
 //change the X location
 void Location::MoveX(int x)
 {
@@ -39,7 +38,7 @@ bool Location::IsWall(Coordinates checkCoordinate, Maze myMaze)
 //overloaded operator for assignment
 Location& Location::operator=(Location &myLocation) 
 {
-	this->SetCoordinates(myLocation.GetCoordinates());
+	this->SetCoordinates(myLocation.GetCoordinates().x, myLocation.GetCoordinates().y, myLocation.GetCoordinates().z);
     return *this;
 }
 

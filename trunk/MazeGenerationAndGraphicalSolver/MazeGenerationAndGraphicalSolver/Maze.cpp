@@ -7,7 +7,7 @@ using namespace std;
 
 Maze::Maze()
 {
-	width = 0;
+	/*width = 0;
 	length = 0;
 	real_width = 0;
 	real_length = 0;
@@ -18,6 +18,33 @@ Maze::Maze()
 		temp.resize(width);
 		for (int j=0; j<length; j++)
 			maze.push_back(temp);
+	}*/
+	int l,w;
+	l=w=4;
+	srand(time(NULL));
+	real_width = w;
+	real_length = l;
+	width = w*4+1;
+	length = l*4+1;
+
+	for(int i=0; i<width; i++)
+	{
+		vector<bool> temp;
+		temp.resize(width);
+		for (int j=0; j<length; j++)
+			maze.push_back(temp);
+	}
+
+	for(int i=0; i<width; i++)
+	{
+		maze[i][0] = true;
+		maze[i][width-1] = true;
+	}
+
+	for(int i=0; i<length; i++)
+	{
+		maze[0][i] = true;
+		maze[length-1][i] = true;
 	}
 }
 
@@ -48,16 +75,6 @@ Maze::Maze(int w, int l)
 		maze[0][i] = true;
 		maze[length-1][i] = true;
 	}
-
-	//if (rand%2)
-	{
-
-	}
-	//else
-	{
-
-	}
-
 }
 
 vector<vector<bool>> Maze::GetMaze()
