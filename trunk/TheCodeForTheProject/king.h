@@ -1,5 +1,6 @@
 #pragma once
 #include "Location.h"
+#include <vector>
 
 enum Direction {North, East, South, West};
 
@@ -21,7 +22,7 @@ public:
 		return myLocation;
 	}
 
-	//prototype function to make my project work
+	//get the maze in the king class
 	Maze GetMaze()
 	{
 		return myMaze;
@@ -33,11 +34,31 @@ public:
 		return myDirection;
 	}
 
+	//get the vector of the kings path
+	vector<Location> GetKingsPath()
+	{
+		return kingsPath;
+	}
+
+	void PushPath(Location newLocation)
+	{
+		kingsPath.push_back(newLocation);
+	}
 	/********************************setters*********************************/
 	//set the direstion of the current king
 	void SetDirection(Direction newDirection)
 	{
 		myDirection = newDirection;
+	}
+
+	void SetLocation(Location newLocation)
+	{
+		myLocation = newLocation;
+	}
+
+	void SetLocation(Coordinates newCoord)
+	{
+		myLocation.SetLocation(newCoord);
 	}
 	/********************************Looking Functions***********************/
 
@@ -73,4 +94,9 @@ private:
 	//Enumerated type to make traversing the maze easier
 	//"North, East, South, West"
 	Direction myDirection;
+
+	//the vector that will be storing the kings locations
+	//possibility of using this vector to store choices
+	//if i impliment a depth first search algorithm
+	vector <Location> kingsPath;
 };
