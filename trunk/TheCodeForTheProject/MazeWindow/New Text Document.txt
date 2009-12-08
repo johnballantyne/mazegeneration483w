@@ -1,0 +1,1 @@
+LHR, RHR; recursive division (regular, biased), depth-first search
