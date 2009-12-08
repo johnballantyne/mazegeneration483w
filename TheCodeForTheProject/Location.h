@@ -5,11 +5,6 @@
 
 using namespace std;
 
-//outputing coordinates is same as cout
-//ostream& operator<<(ostream& output, Coordinates p);
-
-//class has set and get funcitons also has a coordinate struct
-//to keep track of location based on x and y
 class Location
 {
 public:
@@ -28,6 +23,8 @@ public:
 	Coordinates GetCoordinates();
 	//sets the locaiton of whatever has a location
 	void SetCoordinates(int x, int y, int z);
+	//set location
+	void SetLocation(Coordinates myCoords);
 	//change the X location
 	void MoveX(int x);
 	//change the y location
@@ -37,8 +34,8 @@ public:
 	//checks if coordinate is a wall
 	bool IsWall(Coordinates checkCoordinate, Maze myMaze);
 	//overloaded = operator for locations
-	Location & operator=(Location &myLocation);
-private:
+	Location & operator=(const Location &myLocation);
+protected:
 	Coordinates myCoordinates;
 };
 
