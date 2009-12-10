@@ -83,6 +83,10 @@ public:
 
 	void Move(Direction moveDirection);
 	
+	void SetMazeCoordinate(Location myLoc, bool set)
+	{
+		myMaze.setCoordinate(myLoc.GetCoordinates().y, myLoc.GetCoordinates().z, set);
+	}
 private:
 	//Location Variable stores Kings Coordinates
 	//See location.h for methods

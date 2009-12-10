@@ -20,7 +20,7 @@ Maze::Maze()
 			maze.push_back(temp);
 	}*/
 	int l,w;
-	l=w=4;
+	l=w=5;
 	srand(time(NULL));
 	real_width = w;
 	real_length = l;
