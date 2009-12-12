@@ -13,6 +13,8 @@
 //ADDED*************
 #define MAZEW 12
 #define MAZEL 12
+int SizeOfMaze, GenAlgor, SolutionAlgor;
+
 
 int Q = 3;
 int S = 0;
@@ -328,6 +330,10 @@ int main(int argc, char** argv)
 
 	glutInit(&argc, argv);
 	Init("Maze Navigator");
+
+	SizeOfMaze = argv[1];
+	GenAlgor = argv[2];
+	SolutionAlgor = argv[3];
 
 	glutIgnoreKeyRepeat(1);
 	glutKeyboardFunc(NormalKeyPress);
