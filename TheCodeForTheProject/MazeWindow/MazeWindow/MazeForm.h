@@ -257,8 +257,8 @@ private: System::Void GenerateButton_Click(System::Object^  sender, System::Even
 			String^ thing = "MazeNavigator.exe " + length + " " + sendGen + " " + sendSolve;
 			const char* sysCall;
 			sysCall = context->marshal_as<const char*>( thing );
-			MessageBox::Show( thing, "Success!", MessageBoxButtons::OK, MessageBoxIcon::Exclamation );
-			//system( sysCall );
+			//MessageBox::Show( thing, "Success!", MessageBoxButtons::OK, MessageBoxIcon::Exclamation );
+			system( sysCall );
 		 }
 private: System::Void ExitButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			exit(0);
