@@ -200,19 +200,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\CustomColor.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\CustomColor.h"
-				FileType="3"
-				>
-				<File
-					RelativePath=".\CustomColor.resx"
-					>
-				</File>
-			</File>
-			<File
 				RelativePath=".\MazeWindow.cpp"
 				>
 			</File>

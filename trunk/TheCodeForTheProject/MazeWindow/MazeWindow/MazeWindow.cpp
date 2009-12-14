@@ -1,7 +1,7 @@
 // MazeWindow.cpp : main project file.
 
 #include "stdafx.h"
-#include "Form1.h"
+#include "MazeForm.h"
 
 using namespace MazeWindow;
 
@@ -13,6 +13,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew Form1());
+	Application::Run(gcnew MazeForm());
 	return 0;
 }
